@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  --black: #111111;
+  --paper: #f4f1eb;
+  --white: #fffdf8;
+  --acid: #e7ff42;
+  --orange: #ff6b3d;
+  --blue: #5157ff;
+  --line: rgba(17, 17, 17, .22);
+  --gutter: clamp(1.25rem, 3vw, 3rem);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--black);
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  font-size: 16px;
+}
+a { color: inherit; }
+button { font: inherit; }
+
+.site-header,
+.site-footer {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background: var(--black);
+  color: var(--white);
+}
+.site-header {
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4rem;
+  padding: .85rem var(--gutter);
+  border-bottom: 1px solid rgba(255, 255, 255, .35);
+}
+.studio-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -.03em;
+}
+.language-switcher { display: flex; gap: .35rem; align-items: center; font-size: .8rem; }
+.language-button {
+  border: 0;
+  padding: .15rem 0;
+  color: #8e8e8e;
+  background: transparent;
+  cursor: pointer;
+}
+.language-button.is-active,
+.language-button:hover { color: var(--acid); }
+
+.content {
+  display: flex;
+  min-height: 100vh;
+  padding: 4rem 0 5.6rem;
+}
+.projects-pane,
+.about-pane { width: 50%; min-width: 0; padding: 2rem var(--gutter) 4rem; }
+.projects-pane { background: var(--paper); }
+.about-pane { background: var(--black); color: var(--white); }
+.pane-heading { margin-bottom: 3.5rem; }
+.eyebrow,
+.section-label,
+.project-kicker {
+  margin: 0 0 .7rem;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.eyebrow { color: var(--orange); }
+.about-pane .eyebrow { color: var(--acid); }
+h1, h2, p { margin-top: 0; }
+h1 {
+  margin-bottom: 0;
+  font-size: clamp(2.4rem, 5vw, 5.5rem);
+  line-height: .9;
+  letter-spacing: -.07em;
+}
+h2 {
+  margin-bottom: .5rem;
+  font-size: clamp(1.6rem, 2.7vw, 3rem);
+  line-height: .95;
+  letter-spacing: -.055em;
+}
+.project + .project { margin-top: 7rem; }
+.project-heading { margin-bottom: 1.25rem; }
+.project-kicker { color: var(--blue); }
+.project-meta { margin-bottom: 0; font-size: .82rem; }
+.media-card {
+  position: relative;
+  display: flex;
+  min-height: min(54vw, 35rem);
+  align-items: flex-end;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 1rem;
+  color: var(--black);
+  background: #d9d4c9;
+}
+.media-card::before,
+.media-card::after { content: ""; position: absolute; pointer-events: none; }
+.media-card::before { inset: 12% 18%; border: 2px solid currentColor; transform: rotate(-8deg); }
+.media-card::after { width: 70%; height: 55%; left: 20%; bottom: 10%; border-top: 2px solid currentColor; transform: skewY(-22deg); }
+.media-house { background: var(--acid); }
+.media-house-plan { background: var(--orange); min-height: min(38vw, 25rem); }
+.media-market { background: var(--orange); }
+.media-market-plan { background: var(--blue); color: var(--white); min-height: min(38vw, 25rem); }
+.media-market-axonometry { background: var(--white); min-height: min(38vw, 25rem); }
+.media-rakova { background: var(--blue); color: var(--white); }
+.media-rakova-plan { background: var(--acid); min-height: min(38vw, 25rem); }
+.media-image { color: var(--white); background: var(--black); }
+.media-image::before,
+.media-image::after { display: none; }
+.media-image picture { position: absolute; inset: 0; display: block; }
+.media-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.media-diagram { color: var(--black); }
+.media-diagram img { object-fit: contain; background: var(--white); }
+.media-label,
+.media-mark { position: relative; z-index: 1; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+.image-caption { max-width: 27rem; margin: .75rem 0 1.75rem; font-size: .9rem; line-height: 1.3; }
+.project-description { max-width: 36rem; margin: 0 0 2rem; font-size: 1.05rem; line-height: 1.35; }
+.about-list { max-width: 38rem; }
+.about-section { padding: 0 0 5rem; }
+.about-section + .about-section { padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, .3); }
+.about-section h2 { color: var(--acid); }
+.about-section p:not(.section-label) { font-size: 1.3rem; line-height: 1.25; }
+.section-label { color: var(--orange); }
+.portrait-placeholder {
+  display: flex;
+  min-height: 20rem;
+  align-items: flex-end;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+  background: var(--blue);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.plain-list { padding: 0; margin: 1.5rem 0 1.75rem; list-style: none; }
+.plain-list li { display: flex; justify-content: space-between; gap: 1rem; padding: .65rem 0; border-bottom: 1px solid rgba(255, 255, 255, .3); font-size: 1rem; }
+.plain-list li span:first-child { color: var(--acid); }
+.text-link { font-size: .9rem; text-decoration-thickness: 1px; text-underline-offset: .25rem; }
+.contact-section { padding-bottom: 0; }
+.contact-email { display: inline-block; color: var(--acid); font-size: clamp(1.3rem, 2.5vw, 2.6rem); font-weight: 500; letter-spacing: -.05em; text-decoration: none; border-bottom: 2px solid var(--acid); }
+.site-footer { bottom: 0; display: flex; align-items: center; justify-content: space-between; min-height: 4.6rem; padding: .75rem var(--gutter); border-top: 1px solid rgba(255, 255, 255, .35); font-size: .75rem; }
+.site-footer p { margin: 0; }
+.social-links { display: flex; gap: 1.25rem; }
+.social-links a { text-decoration: none; }
+.social-links a:hover { color: var(--acid); }
+
+@media (max-width: 700px) {
+  .content { display: block; }
+  .projects-pane, .about-pane { width: 100%; padding-top: 2rem; }
+  .about-pane { padding-top: 3rem; }
+  .media-card { min-height: 75vw; }
+  .media-house-plan, .media-market-plan, .media-rakova-plan { min-height: 58vw; }
+  h1 { font-size: clamp(3.2rem, 18vw, 6rem); }
+  .site-footer { align-items: flex-start; flex-direction: column; gap: .5rem; }
+}
+@media (min-width: 701px) {
+  .projects-pane, .about-pane { height: calc(100vh - 8.6rem); overflow-y: auto; }
+  .projects-pane { border-right: 1px solid var(--black); }
+}
