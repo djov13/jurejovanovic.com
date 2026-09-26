@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jure Jovanovic — architecture, research and urban ideas.">
-  <title>Jure Jovanovic Studio za arhitekturo</title>
+  <meta name="description" content="Dejan Jovanovic — architecture, research and urban ideas.">
+  <title>Dejan Jovanovic — Architecture</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="studio-name" href="#about-title" aria-label="Back to the beginning of About me">Jure Jovanovic</a>
+    <a class="studio-name" href="#about-title" aria-label="Back to the beginning of About me">Dejan Jovanovic</a>
     <nav class="language-switcher" aria-label="Language selection">
       <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
       <span aria-hidden="true">/</span>
-      <button class="language-button" type="button" data-language="de" aria-pressed="false">DE</button>
-      <span aria-hidden="true">/</span>
+      <!--<button class="language-button" type="button" data-language="de" aria-pressed="false">DE</button>
+      <span aria-hidden="true">/</span>-->
       <button class="language-button" type="button" data-language="si" aria-pressed="false">SI</button>
     </nav>
   </header>
@@ -30,80 +30,97 @@
       </div>
 
       <div class="projects-list">
-        <article class="project">
-          <div class="project-heading">
-            <p class="project-kicker">01 — Residential</p>
-            <h2 data-i18n="houseTitle">House on the Hill</h2>
-            <p class="project-meta" data-i18n="houseMeta">Graz, Austria · Residential · 2026</p>
-          </div>
-          <div class="media-card media-house" role="img" aria-label="Abstract architectural study of a house on a hill">
-            <span class="media-label">Image 01 / Elevation study</span>
-            <span class="media-mark">DJ—01</span>
-          </div>
-          <p class="image-caption" data-i18n="houseImageOne">The building of type C as seen from north-west.</p>
-          <p class="project-description" data-i18n="houseDescription">A compact residence shaped by its sloping site and surrounding landscape. Natural materials, generous openings, and carefully framed views create a quiet connection between interior and exterior.</p>
-          <div class="media-card media-house-plan" role="img" aria-label="Abstract ground floor plan">
-            <span class="media-label">Image 02 / Ground floor plan</span>
-            <span class="media-mark">DJ—02</span>
-          </div>
-          <p class="image-caption" data-i18n="houseImageTwo">Layout of the ground floor.</p>
-        </article>
+          <!-- 01 RESIDENTIAL-->
+          <article class="project">
+              <div class="project-heading">
+                  <p class="project-kicker">01 — Residential</p>
+                  <h2 data-i18n="houseTitle">House on the Hill</h2>
+                  <p class="project-meta" data-i18n="houseMeta">Graz, Austria · Residential · 2026</p>
+              </div>
+              <figure class="media-figure">
+                  <div class="media-card media-house" role="img" aria-label="Abstract architectural study of a house on a hill">
+                      <span class="media-label">Image 01 / Elevation study</span>
+                      <span class="media-mark">DJ—01</span>
+                  </div>
+                  <figcaption class="image-caption" data-i18n="houseImageOne">The building of type C as seen from north-west.</figcaption>
+              </figure>
+              <p class="project-description" data-i18n="houseDescription">A compact residence shaped by its sloping site and surrounding landscape. Natural materials, generous openings, and carefully framed views create a quiet connection between interior and exterior.</p>
+              <figure class="media-figure">
+                  <div class="media-card media-house-plan" role="img" aria-label="Abstract ground floor plan">
+                      <span class="media-label">Image 02 / Ground floor plan</span>
+                      <span class="media-mark">DJ—02</span>
+                  </div>
+                  <figcaption class="image-caption" data-i18n="houseImageTwo">Layout of the ground floor.</figcaption>
+              </figure>
+          </article>
 
-        <article class="project">
-            <div class="project-heading">
-                <p class="project-kicker" data-i18n="competitionTitle">02 — Competition</p>
-                <h2>Markethall Tabor</h2>
-                <p class="project-meta">Tabor, Slovenia · 2nd prize · 2024</p>
-            </div>
-            <div class="media-card media-image media-market">
-                <picture>
-                    <source media="(max-width: 700px)" srcset="images/markethall-render-mobile.webp">
-                    <img src="images/markethall-render-desktop.webp" alt="Markethall Tabor viewed from the market square">
-                </picture>
-                <span class="media-label">Image 01 / Market canopy</span>
-                <span class="media-mark">MT—01</span>
-            </div>
-            <p class="image-caption">A civic roof that gathers the market and the neighbourhood below.</p>
-            <p class="project-description" data-i18n="markethallDescription">The competition called for the redesign of all four quadrants at the intersection of two major roads. The current market premises, which were designed according to a neighborhood plan from the 1980s, no longer meet today's standards.</p>
-            <p class="project-description" data-i18n="markethallTeam">Together with: Miha Fujs, u.d.i.a., Lana Topolovec, m.i.a., Nebojša Drinić, m.i.a., Mihael Novak, m.i.a.</p>
-            <div class="media-card media-image media-market-plan media-diagram">
-                <picture>
-                    <source media="(max-width: 700px)" srcset="images/markethall-floorplan-mobile.webp">
-                    <img src="images/markethall-floorplan-desktop.webp" alt="Markethall Tabor site plan with market, trees and shared space">
-                </picture>
-                <span class="media-label">Image 02 / Site plan</span>
-                <span class="media-mark">MT—02</span>
-            </div>
-            <p class="image-caption">A clear field of stalls, trees and shared space.</p>
-            <div class="media-card media-image media-market-axonometry media-diagram">
-                <picture>
-                    <source media="(max-width: 700px)" srcset="images/markethall-axonometry-mobile.webp">
-                    <img src="images/markethall-axonometry-desktop.webp" alt="Markethall Tabor axonometric study of the civic roof and public spaces">
-                </picture>
-                <span class="media-label">Image 03 / Axonometric study</span>
-                <span class="media-mark">MT—03</span>
-            </div>
-            <p class="image-caption">The market and community spaces form a connected public landscape.</p>
-        </article>
+          <!-- 02 COMPETITION-->
+          <article class="project">
+              <div class="project-heading">
+                  <p class="project-kicker" data-i18n="competitionTitle">02 — Competition</p>
+                  <h2>Markethall Tabor</h2>
+                  <p class="project-meta">Tabor, Slovenia · 2nd prize · 2024</p>
+              </div>
+              <figure class="media-figure">
+                  <div class="media-card media-image media-market">
+                      <picture>
+                          <source media="(max-width: 700px)" srcset="images/markethall-render-mobile.png">
+                          <img src="images/markethall-render-desktop.png" alt="Markethall Tabor viewed from the market square">
+                      </picture>
+                      <span class="media-label">Image 01 / Market canopy</span>
+                      <span class="media-mark">MT—01</span>
+                  </div>
+                  <figcaption class="image-caption">A civic roof that gathers the market and the neighbourhood below.</figcaption>
+              </figure>
+              <p class="project-description" data-i18n="markethallDescription">The competition called for the redesign of all four quadrants at the intersection of two major roads. The current market premises, which were designed according to a neighborhood plan from the 1980s, no longer meet today's standards.</p>
+              <p class="project-description" data-i18n="markethallTeam">Together with: Miha Fujs, u.d.i.a., Lana Topolovec, m.i.a., Nebojša Drinić, m.i.a., Mihael Novak, m.i.a.</p>
+              <figure class="media-figure">
+                  <div class="media-card media-image media-market-plan media-diagram">
+                      <picture>
+                          <source media="(max-width: 700px)" srcset="images/markethall-floorplan-mobile.png">
+                          <img src="images/markethall-floorplan-desktop.png" alt="Markethall Tabor site plan with market, trees and shared space">
+                      </picture>
+                      <span class="media-label">Image 02 / Site plan</span>
+                      <span class="media-mark">MT—02</span>
+                  </div>
+                  <figcaption class="image-caption">A clear field of stalls, trees and shared space.</figcaption>
+              </figure>
+              <figure class="media-figure">
+                  <div class="media-card media-image media-market-axonometry media-diagram">
+                      <picture>
+                          <source media="(max-width: 700px)" srcset="images/markethall-axonometry-mobile.png">
+                          <img src="images/markethall-axonometry-desktop.png" alt="Markethall Tabor axonometric study of the civic roof and public spaces">
+                      </picture>
+                      <span class="media-label">Image 03 / Axonometric study</span>
+                      <span class="media-mark">MT—03</span>
+                  </div>
+                  <figcaption class="image-caption">The market and community spaces form a connected public landscape.</figcaption>
+              </figure>
+          </article>
 
-        <article class="project">
-          <div class="project-heading">
-            <p class="project-kicker">03 — Competition entry</p>
-            <h2>Rakova Jelša III</h2>
-            <p class="project-meta">Ljubljana, Slovenia · 2025</p>
-          </div>
-          <div class="media-card media-rakova" role="img" aria-label="Abstract Rakova Jelša housing drawing">
-            <span class="media-label">Image 01 / Housing study</span>
-            <span class="media-mark">RJ—01</span>
-          </div>
-          <p class="image-caption">A shared landscape between compact homes.</p>
-          <p class="project-description">A study of collective living, soft edges and adaptable domestic space at the city’s edge.</p>
-          <div class="media-card media-rakova-plan" role="img" aria-label="Abstract Rakova Jelša site plan">
-            <span class="media-label">Image 02 / Site strategy</span>
-            <span class="media-mark">RJ—02</span>
-          </div>
-          <p class="image-caption">The site strategy follows the existing green structure.</p>
-        </article>
+          <!-- 03 COMPETITION ENTRY-->
+          <article class="project">
+              <div class="project-heading">
+                  <p class="project-kicker">03 — Competition entry</p>
+                  <h2>Rakova Jelša III</h2>
+                  <p class="project-meta">Ljubljana, Slovenia · 2025</p>
+              </div>
+              <figure class="media-figure">
+                  <div class="media-card media-rakova" role="img" aria-label="Abstract Rakova Jelša housing drawing">
+                      <span class="media-label">Image 01 / Housing study</span>
+                      <span class="media-mark">RJ—01</span>
+                  </div>
+                  <figcaption class="image-caption">A shared landscape between compact homes.</figcaption>
+              </figure>
+              <p class="project-description">A study of collective living, soft edges and adaptable domestic space at the city’s edge.</p>
+              <figure class="media-figure">
+                  <div class="media-card media-rakova-plan" role="img" aria-label="Abstract Rakova Jelša site plan">
+                      <span class="media-label">Image 02 / Site strategy</span>
+                      <span class="media-mark">RJ—02</span>
+                  </div>
+                  <figcaption class="image-caption">The site strategy follows the existing green structure.</figcaption>
+              </figure>
+          </article>
       </div>
     </section>
 
@@ -122,10 +139,10 @@
 
         <article class="about-section">
           <p class="section-label" data-i18n="aboutLabel">About me</p>
-          <div class="portrait-placeholder" aria-label="Portrait placeholder for Jure Jovanovic">
+          <div class="portrait-placeholder" aria-label="Portrait placeholder for Dejan Jovanovic">
             <span>Portrait<br>coming soon</span>
           </div>
-          <p data-i18n="bio">Jure Jovanovic is a young architect interested in the relationship between precise forms and the everyday life they hold.</p>
+          <p data-i18n="bio">Dejan Jovanovic is a young architect interested in the relationship between precise forms and the everyday life they hold.</p>
           <p data-i18n="education">He graduated in architecture in 2026 and works across residential design, competitions and architectural research.</p>
         </article>
 
@@ -149,7 +166,7 @@
           <p class="section-label" data-i18n="contact">Contact</p>
           <h2 data-i18n="contactTitle">Have a project in mind?</h2>
           <p data-i18n="contactBody">For new commissions, collaborations or a conversation about architecture, write to:</p>
-          <a class="contact-email" href="mailto:hello@Jure-jovanovic.com">hello@Jure-jovanovic.com</a>
+          <a class="contact-email" href="mailto:hello@dejan-jovanovic.com">hello@dejan-jovanovic.com</a>
         </article>
       </div>
     </section>
@@ -157,11 +174,11 @@
 
   <footer class="site-footer">
     <nav class="social-links" aria-label="Social links">
-      <a href="mailto:hello@Jure-jovanovic.com">mail ↗</a>
+      <a href="mailto:hello@dejan-jovanovic.com">mail ↗</a>
       <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin ↗</a>
       <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">instagram ↗</a>
     </nav>
-    <p>© Jure JOVANOVIC 2026</p>
+    <p>© DEJAN JOVANOVIC 2026</p>
   </footer>
 
 <script type="module" src="js/main.js"></script>
