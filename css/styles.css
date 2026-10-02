@@ -4,15 +4,16 @@
     --white: #ffffff;
     /* Neutral */
     --gray-light: #e5e5e5;
-    --gray: #8e8e8e;
     --gray-dark: #333333;
     /* Accent */
-    --green: #39ff14;
+    --green: #66cc00;
     /* Lines */
     --line-dark: rgba(17, 17, 17, .22);
     --line-light: rgba(255, 255, 255, .30);
     /* Layout */
-    --gutter: clamp(1.25rem, 3vw, 3rem);
+    --gutter: 1rem;
+    --header-height: 4rem;
+    --footer-height: 4rem;
 }
 
 * {
@@ -26,8 +27,8 @@ html {
 body {
     margin: 0;
     background: var(--black);
-    color: var(--black);
-    font-family: Inter, Arial, sans-serif;
+    color: var(--white);
+    font-family: Arial;
     font-size: 16px;
 }
 
@@ -55,9 +56,10 @@ button {
     top: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    min-height: 4rem;
-    padding: .85rem var(--gutter);
+    /*justify-content: space-between;*/
+    justify-content: center;
+    height: var(--header-height);
+    padding: var(--gutter);
     border-bottom: 1px solid var(--line-light);
 }
 
@@ -69,7 +71,7 @@ button {
 }
 
     .studio-name:hover {
-        color: var(--green);
+        text-decoration: underline;
     }
 
 
@@ -85,15 +87,15 @@ button {
 .language-button {
     border: 0;
     padding: .15rem 0;
-    color: var(--gray);
+    color: var(--white);
     background: transparent;
     cursor: pointer;
 }
 
-    .language-button.is-active,
-    .language-button:hover {
-        color: var(--green);
-    }
+.language-button.is-active,
+.language-button:hover {
+    text-decoration: underline;
+}
 
 
 /* Main content */
@@ -101,18 +103,19 @@ button {
 .content {
     display: flex;
     min-height: 100vh;
-    padding: 4rem 0 5.6rem;
+    padding: var(--header-height) 0 var(--footer-height);
 }
 
 .projects-pane,
 .about-pane {
     width: 50%;
     min-width: 0;
-    padding: 2rem var(--gutter) 4rem;
+    padding: var(--gutter);
 }
 
 .projects-pane {
-    background: var(--white);
+    background: var(--black);
+    color: var(--white);
 }
 
 .about-pane {
@@ -121,7 +124,7 @@ button {
 }
 
 .pane-heading {
-    margin-bottom: 3.5rem;
+    margin-bottom: .75rem;
 }
 
 
@@ -130,7 +133,7 @@ button {
 .eyebrow,
 .section-label,
 .project-kicker {
-    margin: 0 0 .7rem;
+    margin: 0 0 .25rem;
     font-size: .72rem;
     font-weight: 600;
     letter-spacing: .1em;
@@ -138,19 +141,19 @@ button {
 }
 
 .eyebrow {
-    color: var(--gray);
+    color: var(--white);
 }
 
 .about-pane .eyebrow {
-    color: var(--green);
+    color: var(--white);
 }
 
 .section-label {
-    color: var(--gray);
+    color: var(--white);
 }
 
 .project-kicker {
-    color: var(--green);
+    color: var(--white);
 }
 
 
@@ -160,6 +163,10 @@ h1,
 h2,
 p {
     margin-top: 0;
+}
+
+p {
+    margin-bottom: .5rem;
 }
 
 h1 {
@@ -180,11 +187,11 @@ h2 {
 /* Projects */
 
 .project + .project {
-    margin-top: 7rem;
+    margin-top: 1rem;
 }
 
 .project-heading {
-    margin-bottom: 1.25rem;
+    margin-bottom: .5rem;
 }
 
 .project-meta {
@@ -196,7 +203,7 @@ h2 {
 /* Media */
 
 .media-figure {
-    margin: 0;
+    margin: 0 calc(-1 * var(--gutter));
 }
 
 .media-card {
@@ -206,7 +213,7 @@ h2 {
     align-items: flex-end;
     justify-content: space-between;
     overflow: hidden;
-    padding: 1rem;
+    padding: var(--gutter);
     color: var(--black);
     background: var(--gray-light);
 }
@@ -237,7 +244,7 @@ h2 {
 /* Project media color treatments */
 
 .media-house {
-    background: var(--green);
+    background: var(--gray-light);
 }
 
 .media-house-plan {
@@ -251,13 +258,13 @@ h2 {
 }
 
 .media-market-plan {
-    background: var(--green);
+    background: var(--gray-light);
     color: var(--black);
     min-height: min(38vw, 25rem);
 }
 
 .media-market-axonometry {
-    background: var(--white);
+    background: #ffffff;
     color: var(--black);
     min-height: min(38vw, 25rem);
 }
@@ -268,7 +275,7 @@ h2 {
 }
 
 .media-rakova-plan {
-    background: var(--green);
+    background: var(--gray-light);
     color: var(--black);
     min-height: min(38vw, 25rem);
 }
@@ -308,7 +315,7 @@ h2 {
 
     .media-diagram img {
         object-fit: contain;
-        background: var(--white);
+        background: #ffffff;
     }
 
 
@@ -325,37 +332,38 @@ h2 {
 }
 
 .image-caption {
-    max-width: 27rem;
-    margin: .75rem 0 1.75rem;
+    margin: .25rem 0 .5rem;
+    padding-inline: var(--gutter);
+    text-align: center;
     font-size: .9rem;
     line-height: 1.3;
 }
 
 .project-description {
-    max-width: 36rem;
-    margin: 0 0 2rem;
+    margin: 0 0 .5rem;
     font-size: 1.05rem;
     line-height: 1.35;
+}
+
+.media-figure + .project-description,
+.project-description + .media-figure {
+    margin-top: 1.5rem;
 }
 
 
 /* About */
 
-.about-list {
-    max-width: 38rem;
-}
-
 .about-section {
-    padding: 0 0 5rem;
+    padding: 0 0 .75rem;
 }
 
     .about-section + .about-section {
-        padding-top: 1rem;
+        padding-top: .5rem;
         border-top: 1px solid var(--line-light);
     }
 
     .about-section h2 {
-        color: var(--green);
+        color: var(--white);
     }
 
     .about-section p:not(.section-label) {
@@ -370,8 +378,8 @@ h2 {
     display: flex;
     min-height: 20rem;
     align-items: flex-end;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    padding: var(--gutter);
+    margin: 0 calc(-1 * var(--gutter)) .5rem;
     color: var(--black);
     background: var(--gray-light);
     font-size: .75rem;
@@ -386,7 +394,7 @@ h2 {
 
 .plain-list {
     padding: 0;
-    margin: 1.5rem 0 1.75rem;
+    margin: .5rem 0;
     list-style: none;
 }
 
@@ -394,13 +402,13 @@ h2 {
         display: flex;
         justify-content: space-between;
         gap: 1rem;
-        padding: .65rem 0;
+        padding: .25rem 0;
         border-bottom: 1px solid var(--line-light);
         font-size: 1rem;
     }
 
         .plain-list li span:first-child {
-            color: var(--green);
+            color: var(--white);
         }
 
 
@@ -421,12 +429,12 @@ h2 {
 
 .contact-email {
     display: inline-block;
-    color: var(--green);
+    color: var(--white);
     font-size: clamp(1.3rem, 2.5vw, 2.6rem);
     font-weight: 500;
     letter-spacing: -.05em;
     text-decoration: none;
-    border-bottom: 2px solid var(--green);
+    border-bottom: 2px solid currentColor;
 }
 
 
@@ -434,21 +442,21 @@ h2 {
 
 .site-footer {
     bottom: 0;
+    background: var(--green);
+    color: var(--black);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 4.6rem;
-    padding: .75rem var(--gutter);
+    height: var(--footer-height);
+    padding: var(--gutter);
     border-top: 1px solid var(--line-light);
-    font-size: .75rem;
+    font-size: 1rem;
 }
-
-    .site-footer p {
-        margin: 0;
-    }
 
 .social-links {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
     gap: 1.25rem;
 }
 
@@ -457,7 +465,7 @@ h2 {
     }
 
         .social-links a:hover {
-            color: var(--green);
+            text-decoration: underline;
         }
 
 
@@ -472,11 +480,11 @@ h2 {
     .projects-pane,
     .about-pane {
         width: 100%;
-        padding-top: 2rem;
+        padding-top: var(--gutter);
     }
 
     .about-pane {
-        padding-top: 3rem;
+        padding-top: var(--gutter);
     }
 
     .media-card {
@@ -493,11 +501,6 @@ h2 {
         font-size: clamp(3.2rem, 18vw, 6rem);
     }
 
-    .site-footer {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: .5rem;
-    }
 }
 
 
@@ -505,13 +508,31 @@ h2 {
 
 @media (min-width: 701px) {
 
+    .content {
+        padding-bottom: 0;
+    }
+
     .projects-pane,
     .about-pane {
-        height: calc(100vh - 8.6rem);
         overflow-y: auto;
+        scrollbar-width: none;
     }
 
     .projects-pane {
-        border-right: 1px solid var(--black);
+        height: calc(100vh - var(--header-height));
+    }
+
+    .projects-pane::-webkit-scrollbar,
+    .about-pane::-webkit-scrollbar {
+        display: none;
+    }
+
+    .about-pane {
+        height: calc(100vh - var(--header-height) - var(--footer-height));
+    }
+
+    .site-footer {
+        right: 0;
+        width: 50%;
     }
 }
